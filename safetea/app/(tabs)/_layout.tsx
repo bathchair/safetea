@@ -21,6 +21,9 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarStyle: {
+          backgroundColor: 'black',
+        },
       }}>
       <Tabs.Screen
         name="index"
@@ -41,6 +44,9 @@ export default function TabLayout() {
               </Pressable>
             </Link>
           ),
+          headerStyle: {
+            backgroundColor: '#F1414D',
+          },
         }}
       />
       <Tabs.Screen
@@ -48,13 +54,20 @@ export default function TabLayout() {
         options={{
           title: 'Tab Two',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerStyle: {
+            backgroundColor: '#F1414D',
+          },
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={'#F1414D'} />,
+          headerStyle: {
+            backgroundColor: '#F1414D',
+          },
+          headerTitleAlign: 'center',
         }}
       />
     </Tabs>
