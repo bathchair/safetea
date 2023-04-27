@@ -13,8 +13,12 @@ export default function ProfilePage({ path }: { path: string }) {
             <Image source={require('../assets/images/shadow.jpg')} style={styles.image} />
           </View>
           <View style={styles.infoContainer}>
-            <Text style={styles.username}>Username</Text>
-            <Text style={styles.userPoints}>Credibility Points</Text>
+            <Text style={styles.usernameTitle}>My Username</Text>
+            <Text style={styles.userPointsTitle}>Credibility Points</Text>
+          </View>
+          <View style={styles.infoContainer}>
+            <Text style={styles.userName}>My Username</Text>
+            <Text style={styles.userPoints}>16</Text>
           </View>
         </View>
       );
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
   profileContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -375,
+    marginTop: -400,
   },
   circle: {
     width: 150,
@@ -50,20 +54,32 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 50,
+    marginTop: 0,
   },
-  username: {
+  usernameTitle: {
+    flex: 1,
     fontSize: 16,
     fontWeight: 'bold',
     color: 'black',
-    textAlign: 'left',
-    marginHorizontal:120,
+    textAlign: 'center',
+  },
+  userPointsTitle: {
+    flex: 1,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'center',
+  },
+  userName:{
+    flex: 1,    
+    fontSize: 18,
+    color: 'black',
+    textAlign: 'center',
   },
   userPoints: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    flex: 1,
+    fontSize: 18,
     color: 'black',
-    textAlign: 'right',
-    marginRight:120,
+    textAlign: 'center',
   },
 });
