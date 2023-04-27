@@ -12,6 +12,10 @@ export default function ProfilePage({ path }: { path: string }) {
           <View style={styles.circle}>
             <Image source={require('../assets/images/shadow.jpg')} style={styles.image} />
           </View>
+          <View style={styles.infoContainer}>
+            <Text style={styles.username}>Username</Text>
+            <Text style={styles.userPoints}>Credibility Points</Text>
+          </View>
         </View>
       );
     }
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
   profileContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -450,
+    marginTop: -375,
   },
   circle: {
     width: 150,
@@ -41,5 +45,25 @@ const styles = StyleSheet.create({
   image: {
     width: 170,
     height: 170,
+  },
+  infoContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 50,
+  },
+  username: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'left',
+    marginHorizontal:120,
+  },
+  userPoints: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'right',
+    marginRight:120,
   },
 });
