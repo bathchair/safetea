@@ -1,29 +1,10 @@
 import { ScrollView, StyleSheet } from 'react-native';
-import { useEffect, useState } from 'react'
 
-import { Text, View } from '../../components/Themed';
+import { View } from '../../components/Themed';
 import NotificationItem from '../../components/NotificationItem';
 
 export default function NotificationScreen() {
-    const fake_data: any[] = require('../../constants/FakeData.json')
-    
-    useEffect(() => {
-        console.log(fake_data);
-        for (let point of fake_data) {
-            console.log(point);
-        }
-        fake_data.forEach((point: any) => {
-            console.log(point);
-        })
-    }, [])
-
-  function renderNotifications(data: any) {
-    data.array.forEach((element: any) => {
-      return (
-        <NotificationItem data={element} />
-      )
-    });
-  }
+  const fake_data: any[] = require('../../constants/FakeData.json')
     
   return (
     <View style={styles.container}>
@@ -47,14 +28,5 @@ const styles = StyleSheet.create({
   },
   scrollstyle: {
     marginTop: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  }
 });

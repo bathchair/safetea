@@ -1,9 +1,5 @@
 import React from 'react';
-import { Button, Pressable, StyleSheet } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { ExternalLink } from './ExternalLink';
-import { MonoText } from './StyledText';
+import { Pressable, StyleSheet } from 'react-native';
 import { Text, View } from './Themed';
 
 export default function NotificationItem({ data }: { data: any }) {
@@ -85,21 +81,5 @@ const styles = StyleSheet.create({
     color: "#000",
     fontWeight: "800",
     fontSize: 16
-  },
-  getStartedText: {
-    fontSize: 17,
-    lineHeight: 24,
-    textAlign: 'center',
-  },
-  helpContainer: {
-    marginTop: 15,
-    marginHorizontal: 20,
-    alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    textAlign: 'center',
   },
 });
