@@ -29,7 +29,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon name="binoculars" color={focused ? "#ef9457" : "#f1414d"} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -53,28 +53,21 @@ export default function TabLayout() {
         name="two"
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon name="exclamation-circle" color={focused ? "#ef9457" : "#f1414d"} />,
           headerStyle: {
             backgroundColor: '#F1414D',
           },
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={'#F1414D'} />,
-          headerStyle: {
-            backgroundColor: '#F1414D',
-          },
-          headerTitleAlign: 'center',
         }}
       />
       <Tabs.Screen
         name="notifications"
         options={{
           title: 'Notifications',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon name="bell" color={focused ? "#ef9457" : "#f1414d"} />,
+          headerStyle: {
+            backgroundColor: '#F1414D',
+          },
+          headerTitleAlign: 'center',
         }}
       />
     </Tabs>
