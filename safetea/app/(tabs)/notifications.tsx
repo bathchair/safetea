@@ -43,7 +43,7 @@ export default function NotificationScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ebeaeb"
+    backgroundColor: "#000"
   },
   scrollstyle: {
     marginTop: 10,
