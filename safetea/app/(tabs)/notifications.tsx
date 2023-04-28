@@ -1,12 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { useEffect, useState } from 'react'
 
 import { Text, View } from '../../components/Themed';
-import fake_data from '../../constants/FakeData';
 import NotificationItem from '../../components/NotificationItem';
 
 export default function NotificationScreen() {
-    const [dataItems, setDataItems] = useState([{}]);
+    const fake_data: any[] = require('../../constants/FakeData.json')
     
     useEffect(() => {
         console.log(fake_data);
@@ -17,19 +16,26 @@ export default function NotificationScreen() {
             console.log(point);
         })
     }, [])
+
+  function renderNotifications(data: any) {
+    data.array.forEach((element: any) => {
+      return (
+        <NotificationItem data={element} />
+      )
+    });
+  }
     
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      {
-        fake_data.forEach((point: any) => {
-            console.log("hello");
+      <ScrollView contentContainerStyle={styles.scrollstyle}>
+        {
+          fake_data.map((element: any) => {
             return (
-                <NotificationItem data={point} />
+              <NotificationItem data={(element)} />
             )
-        })
-      }
+          })
+        }
+      </ScrollView>
     </View>
   );
 }
@@ -37,8 +43,10 @@ export default function NotificationScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#ebeaeb"
+  },
+  scrollstyle: {
+    marginTop: 10,
   },
   title: {
     fontSize: 20,
