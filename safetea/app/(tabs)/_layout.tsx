@@ -28,7 +28,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Near You',
           tabBarIcon: ({ focused }) => <TabBarIcon name="binoculars" color={focused ? "#ef9457" : "#f1414d"} />,
           headerRight: () => (
             <Link href="/modal" asChild>

@@ -3,7 +3,12 @@
         "Date": "4/28/2022",
         "Time": "17:45:32",
         "Description": "Broken Streetlight",
-        "Location": "",
+        "Location": {
+            "latitude": 39.679507963137944,
+            "longitude": -75.7497008651411,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Hazard",
         "UserSubmitted": "shadow",
         "AverageRating": 4.5
@@ -12,7 +17,12 @@
         "Date": "4/28/2022",
         "Time": "16:21:42",
         "Description": "Suspicious Activity",
-        "Location": "",
+        "Location": {
+            "latitude": 39.68191077006498, 
+            "longitude": -75.74948628844348,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Stranger",
         "UserSubmitted": "sonic",
         "AverageRating": 2.7
@@ -21,7 +31,12 @@
         "Date": "4/28/2022",
         "Time": "20:19:11",
         "Description": "Road Construction",
-        "Location": "",
+        "Location": {
+            "latitude": 39.68158049230197, 
+            "longitude": -75.75340231349176,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Construction",
         "UserSubmitted": "shadow",
         "AverageRating": 4.9
@@ -30,7 +45,12 @@
         "Date": "4/28/2022",
         "Time": "10:28:23",
         "Description": "Kirkbride Jesus",
-        "Location": "",
+        "Location": {
+            "latitude": 39.68141535281412, 
+            "longitude": -75.75383146709396,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Commotion",
         "UserSubmitted": "sonic",
         "AverageRating": 3.6
@@ -39,7 +59,12 @@
         "Date": "4/23/2022",
         "Time": "10:19:23",
         "Description": "Kirkbride Jesus",
-        "Location": "",
+        "Location": {
+            "latitude": 39.67746840159107, 
+            "longitude": -75.75040896832671,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Commotion",
         "UserSubmitted": "sonic",
         "AverageRating": 3.1
@@ -48,7 +73,12 @@
         "Date": "4/28/2022",
         "Time": "09:12:56",
         "Description": "Slashed Tires",
-        "Location": "",
+        "Location": {
+            "latitude": 39.68140769967538, 
+            "longitude": -75.74712824745227,
+            "latitudeDelta": 0.0,
+            "longitudeDelta": 0.0
+        },
         "IconType": "Stranger",
         "UserSubmitted": "tails",
         "AverageRating": 4.1
