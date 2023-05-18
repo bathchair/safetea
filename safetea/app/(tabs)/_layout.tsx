@@ -70,6 +70,17 @@ export default function TabLayout() {
           headerTitleAlign: 'center',
         }}
       />
+            <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={'#F1414D'} />,
+          headerStyle: {
+            backgroundColor: '#F1414D',
+          },
+          headerTitleAlign: 'center',
+        }}
+      />
     </Tabs>
   );
 }
