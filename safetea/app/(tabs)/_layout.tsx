@@ -50,16 +50,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ focused }) => <TabBarIcon name="exclamation-circle" color={focused ? "#ef9457" : "#f1414d"} />,
-          headerStyle: {
-            backgroundColor: '#F1414D',
-          },
-        }}
-      />
-      <Tabs.Screen
         name="notifications"
         options={{
           title: 'Notifications',

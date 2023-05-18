@@ -1,15 +1,23 @@
-import { StyleSheet, Pressable, Modal, TextInput } from 'react-native';
-import MapView from 'react-native-maps';
-import { Marker } from 'react-native-maps'
-import { useState } from 'react'
+import { StyleSheet, Image, ScrollView } from 'react-native';
+import NotificationItem from '../../components/NotificationItem';
+import Colors from '../../constants/Colors';
 
 import { Text, View } from '../../components/Themed';
 
 export default function ProfilePage({ path }: { path: string }) {
+  const fake_data: any[] = require('../../constants/FakeData.json')
+  var user_data = [];
+
+  for (let element of fake_data) {
+    if (element['UserSubmitted'] === "shadow") {
+      user_data.push(element);
+    }
+  }
+
     return (
         <View style={styles.profileContainer}>
           <View style={styles.circle}>
-            <Image source={require('../assets/images/shadow.jpg')} style={styles.image} />
+            <Image source={require('../../assets/images/shadow.jpg')} style={styles.image} />
           </View>
           <View style={styles.infoContainer}>
             <Text style={styles.usernameTitle}>My Username</Text>
@@ -19,13 +27,27 @@ export default function ProfilePage({ path }: { path: string }) {
             <Text style={styles.userName}>Shadow</Text>
             <Text style={styles.userPoints}>16</Text>
           </View>
-        </View>
+            <Text style={styles.recentAlertsTitle}>My Recent Alerts</Text>
+            <ScrollView contentContainerStyle={styles.scrollstyle}>
+              {
+                user_data.map((element: any) => {
+                  return (
+                    <NotificationItem data={(element)} />
+                  )
+                })
+              }
+            </ScrollView>
+          </View>
+        
       );
     }
 
 const styles = StyleSheet.create({
   homeScreenFilename: {
     marginVertical: 7,
+  },
+  scrollstyle: {
+    marginTop: 20,
   },
   codeHighlightContainer: {
     borderRadius: 3,
@@ -34,7 +56,7 @@ const styles = StyleSheet.create({
   profileContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -400,
+    marginTop: 50,
   },
   circle: {
     width: 150,
@@ -44,6 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.light.background,
+    marginBottom: 30,
   },
   image: {
     width: 170,
@@ -59,26 +82,33 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
+  },
+  recentAlertsTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 50,
   },
   userPointsTitle: {
     flex: 1,
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
   },
   userName:{
     flex: 1,    
     fontSize: 18,
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
   },
   userPoints: {
     flex: 1,
     fontSize: 18,
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
   },
 });
